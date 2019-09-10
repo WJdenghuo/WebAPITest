@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APITest.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -19,6 +20,9 @@ namespace APITest
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //自定义过滤器
+            config.Filters.Add(new WebApiExceptionFilterAttribution());
         }
     }
 }

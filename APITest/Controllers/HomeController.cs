@@ -8,6 +8,10 @@ namespace APITest.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// index
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
